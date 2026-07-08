@@ -15,25 +15,25 @@
 หมายเลข/ชื่อโจทย์ OJ:
 
 ```text
-
+3011
 ```
 
 OJ submission ID ถ้ามีการส่งแล้ว:
 
 ```text
-
+544896
 ```
 
 สถานะ OJ:
 
 ```text
-Pass / Not Pass / Not Submit
+Pass
 ```
 
 เวลาที่ใช้คิดและทำโจทย์ด้วยตนเอง:
 
 ```text
-
+15-30 minutes
 ```
 
 เลือกหนึ่งข้อ:
@@ -73,7 +73,9 @@ More than 4 weeks
 ถ้ายังไม่เข้าใจโจทย์ทั้งหมด ให้เขียนสิ่งที่เข้าใจในตอนนี้ ความเข้าใจอาจยังไม่ครบหรืออาจผิดได้ แต่ต้องพยายามอธิบายอย่างจริงใจ
 
 ```text
-
+ความเข้าใจตอนแรกคือ
+รับinputตามที่โจทย์กำหนดก็คือสีแดง สีเหลือง สีน้ำเงิน
+เมื่อนำสีแต่ละสีมาผสมที่ได้แก่ สีแดง กับ สีเหลือง , สีแดง กับ สีน้ำเงิน , สีเหลือง กับ สีน้ำเงิน กันจะได้outputตามที่โจทย์กำหนด นั่นคือ สีส้ม สีม่วง สีเขียว ตามลำดับ แต่ถ้านำสีอื่นที่ไม่ได้อยู่ในแม่สีมาผสมผลจะออกมาเป็นerror
 ```
 
 ---
@@ -93,9 +95,16 @@ More than 4 weeks
 สามารถเขียนเป็น pseudocode, flowchart idea หรือขั้นตอนความคิดได้
 
 ```text
-Step 1:
-Step 2:
-Step 3:
+Step 1:input c1 , c2
+Step 2:ใช้ if ( c1 == "Red" and c2 == "Yellow") or ( c1 == "Yellow" and c2 == "Red")
+print("Orange")
+elif ( c1 == "Red" and c2 == "Blue") or ( c1 == "Blue" and c2 == "Red" )
+print("Violet")
+( c1 == "Yellow" and c2 == "Blue") or ( c1 == "Blue" and c2 == "Yellow" )
+print("Green")
+else:
+print("Error")
+Step 3:ทดลองรันแล้วผ่าน แต่พอกดส่งยังไม่ผ่านติดtest cases 3ข้อ
 ```
 
 ---
@@ -115,7 +124,14 @@ Step 3:
 ห้ามคัดลอกคำอธิบายจากคนอื่น
 
 ```text
-
+แก้โค้ดโดยการเปลี่ยนโค้ดและเพิ่ม
+elif {c1 , c2} == {"Red"}
+print("Red")
+elif {c1 , c2} == {"Yellow"}
+print("Yellow")
+elif {c1 , c2} == {"Blue"}
+print("Blue")
+เนื่องจากตอนแรกลืมเงื่อนไขที่นำสีเดียวกันมาผสมกันด้วย ทำให้เมื่อใส่inputสีเดียวกันเข้าไปออกมาเป็นerrorทั้งๆที่ควรได้สีเดิม
 ```
 
 ---
@@ -135,31 +151,32 @@ Step 3:
 ทำไมเลือก case นี้:
 
 ```text
-
+คำตอบต้องออกมาเป็นไปได้ตามเงื่อนไข
 ```
 
 Input:
 
 ```text
-
+Blue
+Yellow
 ```
 
 Expected output:
 
 ```text
-
+Green
 ```
 
 Actual output:
 
 ```text
-
+Green
 ```
 
 Result:
 
 ```text
-Pass / Not Pass
+Pass
 ```
 
 ### Test Case 2
@@ -167,31 +184,32 @@ Pass / Not Pass
 ทำไมเลือก case นี้:
 
 ```text
-
+ทดสอบโค้ดที่แก้มาว่าออกมาได้คำตอบว่า"Error"อีกไหม
 ```
 
 Input:
 
 ```text
-
+Red
+Red
 ```
 
 Expected output:
 
 ```text
-
+Red
 ```
 
 Actual output:
 
 ```text
-
+Red
 ```
 
 Result:
 
 ```text
-Pass / Not Pass
+Pass
 ```
 
 ### Test Case 3
@@ -199,31 +217,32 @@ Pass / Not Pass
 ทำไมเลือก case นี้:
 
 ```text
-
+ืทดลองใส่สีที่ไม่ได้อยู่ในแม่สีว่าคำตอบออกมาErrorตามเงื่อนไขรึป่าว
 ```
 
 Input:
 
 ```text
-
+Pink
+Yellow
 ```
 
 Expected output:
 
 ```text
-
+Error
 ```
 
 Actual output:
 
 ```text
-
+Error
 ```
 
 Result:
 
 ```text
-Pass / Not Pass
+Pass
 ```
 
 ---
@@ -233,7 +252,7 @@ Pass / Not Pass
 ใช้ AI กับโจทย์นี้หรือไม่
 
 ```text
-Yes / No
+No
 ```
 
 ถ้าใช้ AI ต้องทำไฟล์นี้ด้วย:
@@ -276,19 +295,19 @@ Yes / No
 ใครช่วยคุณ
 
 ```text
-
+เพื่อน
 ```
 
 เขาช่วยอะไร
 
 ```text
-
+ถามเพื่อนว่าวิธีเก่าที่ใช้ตอนลองรันเทสเคสก็ได้คำตอบถูกหมด แต่พอกดส่งติด3 test casesเลยลองถามเพื่อนดูเพื่อนเลยแนะนำว่าบืมใส่กรณีสีเดียวกันผสมกันรึป่าว
 ```
 
 คุณยังทำอะไรด้วยตนเอง
 
 ```text
-
+เขียนcodeตามที่บอกไปข้างต้นได้รับความช่วยเหลือแค่เงื่อนไขบางข้อที่ลืมใส่เข้าไปในcode
 ```
 
 คุณคัดลอก code จากคนอื่นหรือไม่
@@ -305,10 +324,10 @@ No
 
 | Statement | Yes/No |
 |---|---|
-| I wrote this submission in my own words. | |
-| I understand my final code. | |
-| I recorded the real OJ status. | |
-| I did not copy AI-generated text directly into this file. | |
-| I did not copy code from another person. | |
-| If I received human help, I disclosed it in this file. | |
-| I submitted the final code to the OJ by myself. | |
+| I wrote this submission in my own words. |Yes|
+| I understand my final code. |Yes|
+| I recorded the real OJ status. |Yes|
+| I did not copy AI-generated text directly into this file. |Yes|
+| I did not copy code from another person. |Yes|
+| If I received human help, I disclosed it in this file. |Yes|
+| I submitted the final code to the OJ by myself. |Yes|
