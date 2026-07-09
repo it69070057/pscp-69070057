@@ -15,25 +15,25 @@
 หมายเลข/ชื่อโจทย์ OJ:
 
 ```text
-
+3017
 ```
 
 OJ submission ID ถ้ามีการส่งแล้ว:
 
 ```text
-
+545213
 ```
 
 สถานะ OJ:
 
 ```text
-Pass / Not Pass / Not Submit
+Pass
 ```
 
 เวลาที่ใช้คิดและทำโจทย์ด้วยตนเอง:
 
 ```text
-
+0-15 minutes
 ```
 
 เลือกหนึ่งข้อ:
@@ -73,7 +73,10 @@ More than 4 weeks
 ถ้ายังไม่เข้าใจโจทย์ทั้งหมด ให้เขียนสิ่งที่เข้าใจในตอนนี้ ความเข้าใจอาจยังไม่ครบหรืออาจผิดได้ แต่ต้องพยายามอธิบายอย่างจริงใจ
 
 ```text
-
+price = int(input())ใช้intเนื่องจากโจทย์บอกว่ารับค่าเป็นจำนวนเต็ม
+และservice = price * 0.10
+นั่นคือราคา คูณ กับ ค่าบริการ และใส่เงื่อไข if ถ้าservice ถ้าค่าบริการ < 50 ให้คิด 50 ทันที และถ้า > 1000 จะคิดแค่ 1000 เช่นถ้า รราคา 300 * 10% = 30 ซึ่ง 30 < 50 แต่ก็จะคิดค่าบริการ50 ทันที และ total = ( price + service ) * 1.07 โดย 1.07คือ เงินค่า price + service = 100% + vat 7% จึงต้องคูณ 1.07 print (f"{total:.2f}")
+เพราะต้องการทศนิยม2ตำแหน่ง
 ```
 
 ---
@@ -93,9 +96,10 @@ More than 4 weeks
 สามารถเขียนเป็น pseudocode, flowchart idea หรือขั้นตอนความคิดได้
 
 ```text
-Step 1:
-Step 2:
-Step 3:
+Step 1: กไหนดตัวแปร price = int(input())ใช้intเนื่องจากโจทย์บอกว่ารับค่าเป็นจำนวนเต็ม
+Step 2:service = price * 0.10
+นั่นคือราคา คูณ กับ ค่าบริการ และใส่เงื่อไข if ถ้าservice ถ้าค่าบริการ < 50 ให้คิด 50 ทันที และ.=h elif ถ้าคิดค่าบริการได้ > 1000 จะคิดแค่ 1000
+Step 3:total = ( price + service ) * 1.07 นั่นคือ เอาราคาาบวกกับค่าบริการและคูณกับ 1.07 นั่นคือ % ของเงินเดิมรวมกับvat 7% จากนั้น print(f"{total:.2f}") จะได้เงินทั้งหมดที่ต้องจ่ายออกมาโดยคิดเป็นทศนิยม 2ตำแหน่ง
 ```
 
 ---
@@ -115,7 +119,7 @@ Step 3:
 ห้ามคัดลอกคำอธิบายจากคนอื่น
 
 ```text
-
+เหมือนกันกับวิธีคิดแรก เนื่องจากส่งแล้วผ่าน
 ```
 
 ---
@@ -135,19 +139,19 @@ Step 3:
 ทำไมเลือก case นี้:
 
 ```text
-
+ทดลองว่าคำตอบออกมาถูกเหมือนที่กดเครื่องคิดเลขไหม
 ```
 
 Input:
 
 ```text
-
+500
 ```
 
 Expected output:
 
 ```text
-
+588.50
 ```
 
 Actual output:
@@ -167,31 +171,31 @@ Pass / Not Pass
 ทำไมเลือก case นี้:
 
 ```text
-
+ทดลองว่าคำตอบออกมาถูกเหมือนที่กดเครื่องคิดเลขไหม
 ```
 
 Input:
 
 ```text
-
+6767
 ```
 
 Expected output:
 
 ```text
-
+7964.76
 ```
 
 Actual output:
 
 ```text
-
+7964.76
 ```
 
 Result:
 
 ```text
-Pass / Not Pass
+Pass
 ```
 
 ### Test Case 3
@@ -199,31 +203,31 @@ Pass / Not Pass
 ทำไมเลือก case นี้:
 
 ```text
-
+ทดลองใส่ค่าที่เมื่อคิดค่าบริการออกมาจะได้ต่ำกว่า50
 ```
 
 Input:
 
 ```text
-
+200
 ```
 
 Expected output:
 
 ```text
-
+267.50
 ```
 
 Actual output:
 
 ```text
-
+267.50
 ```
 
 Result:
 
 ```text
-Pass / Not Pass
+Pass
 ```
 
 ---
@@ -233,7 +237,7 @@ Pass / Not Pass
 ใช้ AI กับโจทย์นี้หรือไม่
 
 ```text
-Yes / No
+No
 ```
 
 ถ้าใช้ AI ต้องทำไฟล์นี้ด้วย:
@@ -251,7 +255,7 @@ ai_reflection.md
 ได้ถามเพื่อน TA ผู้สอน หรือบุคคลอื่นเพื่อขอความช่วยเหลือในโจทย์นี้หรือไม่
 
 ```text
-Yes / No
+No
 ```
 
 ถ้าใช่ ให้อธิบายสั้น ๆ ว่าได้รับความช่วยเหลือแบบใด
@@ -305,10 +309,10 @@ No
 
 | Statement | Yes/No |
 |---|---|
-| I wrote this submission in my own words. | |
-| I understand my final code. | |
-| I recorded the real OJ status. | |
-| I did not copy AI-generated text directly into this file. | |
-| I did not copy code from another person. | |
-| If I received human help, I disclosed it in this file. | |
-| I submitted the final code to the OJ by myself. | |
+| I wrote this submission in my own words. |Yes|
+| I understand my final code. |Yes|
+| I recorded the real OJ status. |Yes|
+| I did not copy AI-generated text directly into this file. |Yes|
+| I did not copy code from another person. |Yes|
+| If I received human help, I disclosed it in this file. |Yes|
+| I submitted the final code to the OJ by myself. |Yes|
